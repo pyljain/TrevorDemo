@@ -8,4 +8,16 @@ openssl req -x509 -sha256 -nodes -days 36500 -newkey \
 
 2. Created connected App in DevHub and Upload Key
 
-3. Upload ket to bucket
+3. Upload key to bucket
+
+```sh
+gsutil mb gs://payal-trevor-test
+
+gsutil cp salesforce.key gs://payal-trevor-test
+```
+
+4. Create a cloud build
+
+```sh
+
+```
