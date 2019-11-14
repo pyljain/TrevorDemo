@@ -15,9 +15,3 @@ gsutil mb gs://payal-trevor-test
 
 gsutil cp salesforce.key gs://payal-trevor-test
 ```
-
-4. Create a cloud build
-
-```sh
-
-```

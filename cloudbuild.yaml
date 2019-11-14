@@ -7,6 +7,10 @@ steps:
   args: ['force:org:create', '--setdefaultusername', '--definitionfile', 'config/project-scratch-def.json', '--targetdevhubusername', '${_SF_USERNAME}', '--setalias', 'testingorg']
 - name: 'payaljain/sfdx:0.1'
   args: ['force:source:push']
+- name: 'payaljain/sfdx:0.1'
+  args: ['force:apex:test:run']
+- name: 'payaljain/sfdx:0.1'
+  args: ['force:org:delete']
 substitutions:
   _BUCKET_NAME: __BUCKET_NAME__
   _SF_USERNAME: __USERNAME__
