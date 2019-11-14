@@ -2,7 +2,7 @@ steps:
 - name: gcr.io/cloud-builders/gsutil
   args: ['cp', 'gs://${_BUCKET_NAME}/salesforce.key', 'salesforce.key']
 - name: 'payaljain/sfdx:0.1'
-  args: ['force:auth:jwt:grant', '-u', '${_SF_USERNAME}', '-f', './salesforce.key', '-i', '${_CONSUMER_KEY}']
+  args: ['force:auth:jwt:grant', '--setdefaultusername', '-u', '${_SF_USERNAME}', '-f', './salesforce.key', '-i', '${_CONSUMER_KEY}']
 - name: 'payaljain/sfdx:0.1'
   args: ['force:source:push']
 - name: 'payaljain/sfdx:0.1'
