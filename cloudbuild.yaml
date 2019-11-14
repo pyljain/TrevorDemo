@@ -4,7 +4,7 @@ steps:
 - name: 'payaljain/sfdx:0.1'
   args: ['force:auth:jwt:grant', '--setdefaultusername', '-u', '${_SF_USERNAME}', '-f', './salesforce.key', '-i', '${_CONSUMER_KEY}']
 - name: 'payaljain/sfdx:0.1'
-  args: ['force:source:deploy']
+  args: ['force:source:deploy', '-p', './force.app']
 substitutions:
   _BUCKET_NAME: __BUCKET_NAME__
   _SF_USERNAME: __USERNAME__
