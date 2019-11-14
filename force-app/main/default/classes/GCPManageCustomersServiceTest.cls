@@ -12,6 +12,7 @@ public class GCPManageCustomersServiceTest {
 
     static testmethod void testQueueable() {
         Test.startTest();
+        System.assertEquals(2, 1);
         Test.stopTest();
     }
 
