@@ -9,12 +9,6 @@
 
 @isTest
 public class GCPManageCustomersServiceTest {
-    @testSetup
-    static void setup() {
-        List<Account> testCustomers = new List<Account>();
-        testCustomers.add(new Account(name='Sample Customer Account'));
-        insert testCustomers;
-    }
 
     static testmethod void testQueueable() {
         Test.startTest();
