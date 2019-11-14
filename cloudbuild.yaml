@@ -8,9 +8,9 @@ steps:
 - name: 'payaljain/sfdx:0.1'
   args: ['force:source:push']
 - name: 'payaljain/sfdx:0.1'
-  args: ['force:apex:test:run']
+  args: ['force:apex:test:run', '--json', '--codecoverage']
 - name: 'payaljain/sfdx:0.1'
-  args: ['force:org:delete']
+  args: ['force:org:delete', '--noprompt']
 substitutions:
   _BUCKET_NAME: __BUCKET_NAME__
   _SF_USERNAME: __USERNAME__
